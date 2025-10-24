@@ -1,0 +1,6 @@
+a = 3 #int()
+b = 4.56 #float()
+c = 'abc84383' #str()
+d = [1,2,3,4] #list()
+e = {1,2,3,4} #set()
+print(type(a), type(b), type(c), type(d), type(d), sep = '\n')
