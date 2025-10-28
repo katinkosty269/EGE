@@ -1,0 +1,15 @@
+for N in range(1728404,1, -1):
+    s = bin(N)[2:]
+    if N % 5 == 0:
+        s+= bin(5)[2:]
+    else:
+        s+= '1'
+    if int(s,2)%7 == 0:
+        s+= bin(7)[2:]
+    else:
+        s+= '1'
+        
+    R= int(s,2)
+    if R<1728404:
+        print(N)
+        break
