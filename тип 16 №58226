@@ -1,0 +1,13 @@
+from sys import *
+setrecursionlimit(10000000)
+
+def F(N):
+    if N == 1:
+        return 1 
+    if N==2:
+        return 2 
+    if N>2 and N % 2 == 0:
+        return (3*N+F(N-3))//3
+    if N>2 and N % 2 != 0:
+        return (7*N + F(N-1)- F(N-2))//5
+print(int(F(35)))
