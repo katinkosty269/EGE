@@ -1,0 +1,8 @@
+def s(x,A):
+    return (x & A) == 0 or ((x & 10)!= 0 or (x&3)!= 0)
+for A in range(1000000,0,-1):
+    if all (s(x,A) for x in range(1000000,0,-1)):
+        print(A)
+        break
+        
+    
