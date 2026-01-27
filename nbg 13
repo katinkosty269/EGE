@@ -1,0 +1,16 @@
+from ipaddress import *
+
+s = ip_network('142.108.56.118/255.255.255.240', 0)
+k = 0
+for ip in s:
+
+    b = bin(int(ip))[2:].zfill(32) #1 способ перевода
+    '''b = f'{int(ip):032b}''  ''' #2 способ перевода
+    b_l = b[:16]
+    b_r = b[16:]
+
+    if b_l.count('1') < b_r.count('1'):
+        k += 1
+
+
+print(k)
