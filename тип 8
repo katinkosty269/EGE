@@ -1,0 +1,6 @@
+#записать слово которое стоит на 239 месте от начала списка
+from itertools import *
+
+a = list(product('БКФЦ',repeat = 5))
+
+print(*a[238])
