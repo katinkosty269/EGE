@@ -1,0 +1,14 @@
+def SS(n,b):
+    s = ''
+    while n > 0:
+        s += str(n%b)
+        n//=b
+    return s[::-1]
+for n in range(0,100000):
+    s = SS(n,3)
+    if n % 3==0:
+        s = s+ s[:-3]
+    else:
+        s = s + SS(((n%3)*3),3)
+    r = int(s,3)
+    print(r)
