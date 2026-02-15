@@ -1,0 +1,16 @@
+def SS(n,b):
+    s = ''
+    while n > 0:
+        s += str(n%b)
+        n = n//b
+    return s[::-1]
+for n in range(20,100000):
+    s = SS(n,8)
+    if n % 7 == 0:
+        s = s + s[-2:]
+    else:
+        s =  SS(((n%7)*3),8)+s
+        r = int(s,8)
+        if r >500:
+            print(n)
+            break
