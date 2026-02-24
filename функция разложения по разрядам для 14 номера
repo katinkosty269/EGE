@@ -1,0 +1,10 @@
+def to10(a,n):
+    a = a[::-1]
+    s = 0
+    for i in range(len(a)):
+        s = s + a[i]*n**i
+    return s
+for x in range(68):
+    a = to10([1,2,3,x,5],68)+to10([1,x,2,3,3],68)
+    if a%12 == 0:
+        print(x,a//12)
