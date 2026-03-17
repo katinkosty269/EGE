@@ -1,0 +1,7 @@
+a = [int(x) for x in open('17_23757.txt')]
+a1 = [x for x in a if 9<x<100]
+q = []
+for x,y in zip(a,a[1:]):
+    if ((9<x<100)+(9<y<100))==1 and (x+y)%min(a1)==0:
+        q.append(x+y)
+print(len(q),max(q))
