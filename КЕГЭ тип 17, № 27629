@@ -1,0 +1,9 @@
+a = [int(x) for x in open('17_27629 (2).txt')]
+
+a_max = [x for x in a if 999 < abs(x) < 10000 and abs(x) % 100 == 43]
+q = []
+for x,y in zip(a,a[1:]):
+    if ((999 < abs(x) < 10000) + (999 < abs(y) < 10000)) >= 1 and (x + y)**2 < max(a_max)**2:
+        q.append((x + y)**2)
+
+print(len(q),max(q))
