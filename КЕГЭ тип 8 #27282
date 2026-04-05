@@ -1,0 +1,9 @@
+from itertools import*
+k = 0
+for x in product('0123456789abc',repeat=6):
+    s=''.join(x)
+    if s.count('0')>=2 and s[0] != '0' and len([i for i in range(len(s) -1) if (int(s[i],13) > 9 and int(s[i + 1],13) > 9)]) == 1 and len([i for i in range(len(s)) if int(s[i],13) >9]) == 2:
+        k += 1
+
+print(k)
+
